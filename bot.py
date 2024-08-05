@@ -25,7 +25,7 @@ def check_tweets():
     last_seen_id = None
     while True:
         try:
-            tweets = twitter_api.user_timeline(screen_name='target_username', since_id=last_seen_id, tweet_mode='extended')
+            tweets = twitter_api.user_timeline(screen_name='0xMoei', since_id=last_seen_id, tweet_mode='extended')
             for tweet in reversed(tweets):
                 bot.send_message(chat_id=CHAT_ID, text=tweet.full_text)
                 last_seen_id = tweet.id

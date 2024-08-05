@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: twitter-to-telegram-bot
+    env: python
+    plan: free
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "bash start.sh"
+    envVars:
+      - key: CONSUMER_KEY
+        value: your_consumer_key
+      - key: CONSUMER_SECRET
+        value: your_consumer_secret
+      - key: ACCESS_TOKEN
+        value: your_access_token
+      - key: ACCESS_TOKEN_SECRET
+        value: your_access_token_secret
+      - key: TELEGRAM_TOKEN
+        value: your_telegram_token
+      - key: CHAT_ID
+        value: your_chat_id
